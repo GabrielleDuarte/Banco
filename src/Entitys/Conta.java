@@ -12,11 +12,18 @@ public class Conta {
 	
 	private Double saldo;
 	
+	private static int count=0;
+	
+	private static int count_conta=0;
+	
 	public Conta(int numero, String tipo ) {
 		this.titular = new Cliente();
 		this.agencia = new Agencia();
 		setTipo(tipo);
 		setNumero(numero);
+		Conta.count+=1;
+		this.numero=count;
+		Conta.count_conta+=1;
 	}
 
 	public double getNumero() {

@@ -29,7 +29,21 @@ public class Cliente {
 	}
 
 	public void setCpf(String cpf) {
+		if(validarCpf(cpf)){ 
 		this.cpf = cpf;
+		}
+		else {
+		System.out.println("O cpf é inválido, insira novamente.");
+		}
+	}
+	
+	public boolean validarCpf (String cpf) {
+		if(cpf.length()==14) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	public String getRg() {
